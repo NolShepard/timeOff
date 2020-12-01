@@ -1,0 +1,17 @@
+to query in flask shell
+first import db instance and models
+from app import db
+from app.models import User, Post
+
+db.session.add() to add changes
+db.session.commit() to commit them to db
+
+users = User.query.all()
+users <should return all users in db
+for u in users:
+	print(u.id, u.username)
+	
+above prints ol of id,username
+
+to make relationships pic
+https://ondras.zarovi.cz/sql/demo/

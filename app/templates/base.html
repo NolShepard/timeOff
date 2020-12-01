@@ -1,0 +1,27 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Time Off</title>
+      {% else %}
+      <title>Welcome to Time Off</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>
+            Time Off: 
+            <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

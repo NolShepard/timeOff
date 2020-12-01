@@ -1,0 +1,5 @@
+cd into microblog
+$ source venv/bin/activate
+#activates virtual flask environment
+$ flask run
+#starts local server that can be viewed in browser at http://localhost:5000/
